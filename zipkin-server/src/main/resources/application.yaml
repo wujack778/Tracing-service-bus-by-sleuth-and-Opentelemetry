@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: zipkin-server
+server:
+  port: 8080
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-bus-jms-sender
+  zipkin:
+    base-url: http://localhost:8080
+  sleuth:
+    sampler:
+      probability: 1
+  jms:
+    servicebus:
+      connection-string: [servicebus-namespace-connection-string]
+      pricing-tier: standard
+
+server:
+  port: 8899
+
