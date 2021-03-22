@@ -4,7 +4,7 @@ There is a gap between service bus and zipkin, the dependency between consumers 
 This document is some conclusions about tracing the service bus through the above methods.
 
 ## Introduction
-This repo contains three parts, [ServiceBus JMS](#ServiceBus JMS), [ServiceBus Multi-binders](#ServiceBus Multibinders) and [ZipkinServer](#ZipkinServer).
+This repo contains three parts, [ServiceBus JMS](#ServiceBus JMS), [ServiceBus Multibinders](#ServiceBus Multibinders) and [ZipkinServer](#ZipkinServer).
 Tracking the service bus, also refer to [Spring cloud sleuth otel][Spring cloud sleuth otel] and [Track Azure SDK for Java][Configure tracing in the Azure SDK for Java].
 
 ## Getting started
@@ -57,7 +57,7 @@ For the configuration of their `application.yaml`, please refer to [Service Bus 
     ```
 4. Zipkin server will show the results of tracing [ZipkinServer](#ZipkinServer).
 
-### ServiceBus Multi-binders
+### ServiceBus Multibinders
 Module `azure-servicebus-queue-multibinders-consumer01`, Module `azure-servicebus-queue-multibinders-consumer02` and Module `azure-servicebus-queue-multibinders-supplier`
 are refer to [Service Bus Multi binders][Service Bus Multi binders Sample]
 For the configuration of their `application.yaml`, please refer to [Service Bus Multi binders Config][Service Bus Multi binders Config]
@@ -74,7 +74,7 @@ For the configuration of their `application.yaml`, please refer to [Service Bus 
     cd Tracing-service-bus-by-sleuth-and-Opentelemetry/zipkin-server
     mvn spring-boot:run   
     ```
-2. Send a POST request to request to test the default binder.
+2. Send a POST request to test the default binder.
     ```
     $ curl -X POST localhost:9000/messages1?message=hello
     ```
